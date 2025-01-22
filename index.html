@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оқушыларды бағалау</title>
+    <link rel="stylesheet" href="bagalau.css">
+</head>
+<body>
+    <h2>Оқушыларды бағалау бағдарламасы</h2>
+    
+    <!-- Оқушының аты-жөнін енгізу -->
+    <label for="studentName">Оқушының аты-жөні:</label>
+    <input type="text" id="studentName" placeholder="Аты-жөні">
+    <br>
+
+    <!-- Оқушының бағасын енгізу -->
+    <label for="studentGrade">Бағасы:</label>
+    <input type="number" id="studentGrade" placeholder="0-10" min="0" max="10">
+    <br>
+
+    <!-- Бағалау батырмасы -->
+    <button onclick="evaluateStudent()">Бағалау</button>
+    <h3 id="result"></h3>
+
+    <!-- Іздеу өрісі -->
+    <label for="searchName">Іздеу:</label>
+    <input type="text" id="searchName" placeholder="Оқушының атын іздеңіз" oninput="searchStudent()">
+    
+    <!-- Бағалау тарихын көрсету -->
+    <div id="history">
+        <h3>Бағалау тарихы:</h3>
+        <div id="historyContainer"></div>
+    </div>
+
+    <script src="bagalau.js"></script>
+</body>
+</html>
